@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+	<meta charset ="utf-8">
+	<title>Real Madrid</title>
+	<link rel = "stylesheet" type = "text/css" href="style22.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>   
+    <script src="scripts/dragcolor.js"></script>
+</head>
+<body>
+	<div class="flex-container">
+		<a href="#" title="К началу" class="topbutton">Go to start</a>
+		<div class="first">
+			<p class="header_txt">Real Madrid</p>
+			<img id="Logo" alt="" src="images/Logo.jpg">
+		</div>
+		<div class="third">
+        <div class="column">
+                           <div id="content-slider">
+                              <div id="slidera">  <!-- Контейнер для слайдера -->
+                                 <div id="maska">  <!-- Маска -->
+                                      <ul id="slayder">
+
+                                       <li id="first" class="firstanimation">  <!-- ID для всплывающей подсказки и класс для анимации -->
+                                 <a href="#"> <img class="scroll-image" alt="" src="images/1.jpg" height="450" width="250%"></a>
+                                 
+                                 </li>
+
+                                 <li id="second" class="secondanimation">  <!-- ID для всплывающей подсказки и класс для анимации -->
+                                 <a href="#"> <img class="scroll-image" alt="" src="images/2.jpg" height="450" width="250%"></a>
+                                 
+                                 </li>
+
+                                 <li id="third" class="thirdanimation">
+                                 <a href="#"> <img class="scroll-image" alt="" src="images/3.jpg"  height="450" width="250%"> </a>
+                                 
+                                 </li>
+
+                                 <li id="fourth" class="fourthanimation">
+                                 <a href="#"> <img class="scroll-image" alt="" src="images/4.jpg" height="450" width="250%"/> </a>
+                                 
+                                 </li>
+
+                                    </ul>
+                                 </div>  <!-- Конец маски -->
+                                 
+                              </div>  <!-- Конец контейнера для слайдера -->
+                           </div>
+                        </div>
+                
+                 <div class="column">
+                    <h3>Club History</h3>
+                    <p class="columntext">
+                        Real Madrid have once again defined an era in world football, winning four European Cups and four Club World Cup. In 2014, they lifted La Décima, before winning the Club World Cup that same year. Zidane's first two seasons in the dugout were historic, clinching La Undécima and La Duodécima. What's more, 2017 became a record-breaking year when the team got their hands on five trophies: The European Cup, the Club World Cup, LaLiga and the European and Spanish Super Cups. La Decimotercera then came in 2018, when they came out on top against Liverpool in Kiev.
+                        </p>
+                </div>
+            </div>
+			<div class="four">
+                <div class="column" id="left2">
+                    <h3 id="h3l2">Zinedine Zidane</h3>
+                    <p class="columntext">Zinedine Zidane, byname Zizou, (born June 23, 1972, Marseille, France), French football (soccer) player who led his country to victories in the 1998 World Cup and the 2000 European Championship. At the moment, the Real Madrid trainer</p>
+                </div>
+                <div class="column" id="right2">
+                        <!--<iframe class="music" width="100%" height="360px" src="https://www.youtube.com/embed/5NiCncTlzyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+						<iframe class="music" width="100%" height="376px" src="https://player.vimeo.com/video/233541046?title=0&byline=0&portrait=0" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+				</div>
+            </div>
+            <div class="five">
+            <form class="contactform" method="POST" action="ok.html">
+                <h4>If you have some questions or suggestions - well come!</h4>
+                <input type="text" id="nickname" name="nickname" required placeholder="Nickname">
+                <input type="email" id="email" name="email" required placeholder="Email" title="Input your email">
+                <textarea id="comment" name="comment" rows="3" placeholder="Write your comment, if you want :)"></textarea>
+                <button class="submitbutton" type="submit" id="button" name="button">Confirm</button>
+                </form>
+            </div>
+            <div class="dragblock">
+                <div class="column" id="dragfrom" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h4 class="h4txt">Choose your favorite player</h4>
+                    <img class="dr" alt="" id="drag1" draggable="true" src="images/bale.jpg" width="200" height="200" ondragstart="dragImg(event)">
+                    <img class="dr" alt="" id="drag2" draggable="true" src="images/benzema.jpg" width="200" height="200" ondragstart="dragImg(event)">
+                    <img class="dr" alt="" id="drag3" draggable="true" src="images/modric.jpg" width="200" height="200" ondragstart="dragImg(event)">
+                    <img class="dr" alt="" id="drag4" draggable="true" src="images/marcelo.jpg" width="200" height="200" ondragstart="dragImg(event)">
+                </div>
+                <div class="column" id="dragto" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <h4 class="h4txt">Put it here</h4>
+                </div>
+            </div>
+            <div class="six">
+                <div class="column" id="canvascolumn">
+                <div class="absoluteflexcontainer">
+				<div id="nearcanvas">
+					<p id="nearcanvastext"> Draw the Logo</p>
+				</div>
+            <canvas id="drawCanvas" width='300' height='355'></canvas>
+                   <div id="choosecolor">
+                       <p class="columntext" >Choose color</p>
+            <input type="color" id="idColor" placeholder="введите текст"/>
+                   </div>
+                   </div>
+                </div>
+                <div class="column" id="drawid">
+                    <p class="columntext" id="drawtext">Something new</p>
+                    <canvas class="c"></canvas>
+                     
+                </div>
+            </div>
+            <div class="seven">
+                <div id="Team"></div>
+                <button id="Downloadd"> Get info </button>
+            </div>
+            
+        </div>
+		<script src="scripts/ajax.js"></script>
+        <script src="scripts/squidvard.js"></script>
+        <script src="scripts/drag.js"></script>
+        
+    </body>
+</html>
+			
